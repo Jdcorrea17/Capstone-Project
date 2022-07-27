@@ -1,0 +1,37 @@
+* {
+    background-color: skyblue;
+}
+
+h1 {
+    background-color: lightpink;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+}
+
+#main-image {
+height: 350px;
+width: 350px;
+display: flex;
+flex-direction: column;
+float: left;
+padding: 9px;
+}
+
+#family{
+height: 350px;
+width: 500px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+p {
+    font-size: large;
+}
+
+#sister {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
