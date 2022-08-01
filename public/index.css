@@ -1,5 +1,9 @@
 * {
-    background-color: bisque;
+    background-color: white;
+}
+
+h2 {
+color: skyblue;
 }
 
 .main {
@@ -29,21 +33,29 @@ h1 {
 }
 
 #main-image {
-height: 350px;
-width: 350px;
-display: flex;
-flex-direction: column;
-float: left;
+height: 500px;
+width: 500x;
 padding: 9px;
 margin-top: 80px;
+padding-left: 40px;
 }
 
-#family{
-height: 350px;
-width: 500px;
-display: block;
-margin-left: auto;
-margin-right: auto;
+.donuts {
+  display: flex;
+  flex-direction: row;
+  flex: 33.33%;
+  padding: 5px;
+  height: 200px;
+  width: 200px;
+}
+
+#donut {
+  height: 200px;
+  
+}
+
+#news {
+  color: blue;
 }
 
 p {
