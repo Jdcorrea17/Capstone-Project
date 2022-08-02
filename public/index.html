@@ -1,61 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
- <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>Deploment Lab</title>
-</head>
-<body>
-   
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+    <title>Deployment lab</title>
+  </head>
+  <body>
     <header class="main">
-<img id="icon" src="https://cdn-icons-png.flaticon.com/512/184/184549.png" alt="Image not found">     
-    <h1>Donut Connection</h1> 
-    <a id="home" ></a>
-    <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" name="menu__toggle"/>
-        <label class="menu__btn" for="menu__toggle">
-          <span></span>
-        </label>
-        <ul class="menu__box">
-          <li><a class="menu__item" href="#">Home</a></li>
-          <li><a class="menu__item" href="#">Menu</a></li>
-          <li><a class="menu__item" href="#">Reviews</a></li>
-          <li><a class="menu__item" href="./contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-  
-    
-</nav>
-</header>
+      <img
+        id="icon"
+        src="https://cdn-icons-png.flaticon.com/512/184/184549.png"
+        alt="Image not found"/>
+      <h1 id="top-page">Donut Connection</h1>
+      <nav>
+        <a id="home"></a>
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" name="menu__toggle"/>
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <ul class="menu__box">
+            <li><a class="menu__item" href="index.html">Home</a></li>
+            <li><a class="menu__item" href="#menu">Menu</a></li>
+            <li><a class="menu__item" href="./review.html">Reviews</a></li>
+            <li><a class="menu__item" href="./contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <img id="main-image" src="./images/Main.jpeg" alt="Image not found">
-   
+
+    <div class="main-image-container">
+      <img id="main-image" src="./images/Main.jpeg" alt="Image not found" />
+    </div>
     <h2>About Us</h2>
 
-    <p>Donut Connection has been a big part of Shakopee MN, for more than 36 years some may say its become a historical place where many locals keep it close as they were brought there as kids.</p>
-    <a id="news" href="https://www.swnewsmedia.com/shakopee_valley_news/news/donut-connection-in-shakopee-was-almost-a-mexican-restaurant-now-its-a-destination-for-doughnut/article_eb409c51-22c7-5759-88ec-b7c40c33cd9a.html">News Article about us</a>
-    <br>
+    <p>
+      Donut Connection has been a big part of Shakopee MN, for more than 36
+      years some may say its become a historical place where many locals keep it
+      close as they were brought there as kids.
+    </p>
+    <a
+      id="news"
+      href="https://www.swnewsmedia.com/shakopee_valley_news/news/donut-connection-in-shakopee-was-almost-a-mexican-restaurant-now-its-a-destination-for-doughnut/article_eb409c51-22c7-5759-88ec-b7c40c33cd9a.html"
+      >News Article about us</a
+    >
+    <br />
+    <h2 id="menu">Menu</h2>
+    <div class="menu-image">
+      <img class="shop" src="./images/Shop.png" alt="Image not found" />
+      <div class="menu-text">
+        <p>
+          From a large selection of donuts of more than 40 different kinds,
+          including fancy donuts, raised and old fashion donuts, and stuffed
+          shell donuts.
+        </p>
+        <div class="menu-random">
+          <img
+            id="randomizer"
+            src="./images/Donuts.jpeg"
+            alt="Image not found"
+          /><button id="random">Randomizer</button>
+        </div>
+      </div>
+    </div>
 
-    <div ></div>
-<h2>Menu</h2>
-    <a href="#Menu"></a>
-   <img class="shop" src="./images/Shop.png" alt="Image not found"> 
+    <br />
 
- 
-    <p>From a large selection of donuts of more than 40 different kinds, including fancy donuts, raised and old fashion donuts, and stuffed shell donuts.</p>
-</div>
-   <div>
-  <img id="randomizer" src="./images/Donuts.jpeg" alt="Image not found"><button id="random">Randomizer</button>
-  </div>
+  
 
-    <br>
-
-<!-- <a href="#Review"></a>
-    <input type="Email" placeholder="Email"> <input type="review" placeholder="Review"> <select aria-placeholder="Rating"> <option value="1">1</option> <option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select> <input type="date" name="" id=""> 
-    <input type="button" value="Submit"> -->
-    
-    <a href="#Contact-Us"></a>
-</body>
+  </body>
 </html>
