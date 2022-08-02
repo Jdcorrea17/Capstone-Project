@@ -56,6 +56,20 @@ padding-left: 40px;
   width: 250px;
 }
 
+.img-gallery {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+}
+
+.imgs-gallery {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+}
+
 .menu-image {
 display: flex;
 justify-content: flex-start;
