@@ -3,7 +3,7 @@ const cors = require('cors')
 const path = require('path')
 
 const app = express()
-
+app.use(cors())
 
 var Rollbar = require('rollbar')
 var rollbar = new Rollbar({

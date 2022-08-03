@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 </head>
@@ -19,7 +20,7 @@
     <nav>
       <a id="home"></a>
       <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" name="menu__toggle"/>
+        <input id="menu__toggle" type="checkbox" placeholder="menu__toggle"/>
         <label class="menu__btn" for="menu__toggle">
           <span></span>
         </label>
@@ -33,7 +34,19 @@
     </nav>
   </header>
 
+<div class="form">
+  <form method="post">
+    <input type="text" placeholder="Name" id="name" autocomplete="off">
+    <input type="text" placeholder="Email" id="email" autocomplete="off">
+    <input type="text" placeholder="Subject" id="subject" autocomplete="off">
+    <textarea id="message" placeholder="Message" cols="30" rows="10"></textarea>
+    <button type="button" id="send">Send</button>
+  </form>
+</div>
 
 
+<script src="../main.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
 </body>
 </html>
