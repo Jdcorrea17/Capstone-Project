@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="review.css">
 </head>
 <body>
 </head>
@@ -26,7 +25,6 @@
         </label>
         <ul class="menu__box">
           <li><a class="menu__item" href="index.html">Home</a></li>
-          <li><a class="menu__item" href="#menu">Menu</a></li>
           <li><a class="menu__item" href="./review.html">Reviews</a></li>
           <li><a class="menu__item" href="./contact.html">Contact Us</a></li>
         </ul>
@@ -34,19 +32,48 @@
     </nav>
   </header>
 
-<div class="form">
-  <form method="post">
-    <input type="text" placeholder="Name" id="name" autocomplete="off">
-    <input type="text" placeholder="Email" id="email" autocomplete="off">
-    <input type="text" placeholder="Subject" id="subject" autocomplete="off">
-    <textarea id="message" placeholder="Message" cols="30" rows="10"></textarea>
-    <button type="button" id="send">Send</button>
-  </form>
+  <div class="form-style">
+    <h2>Reviews</h2>
+<br>
+
+    <form id="ratings">
+<div class="container">
+        <div class="rating-wrap">
+          <label for="rating" >Rating:</label>
+        <div class="center">
+          <fieldset class="rating">
+            <input type="radio" id="star5" name="rating-star" value="5">
+            <label for="star5" class="full" title="Amazing"></label>
+            <input type="radio" id="star4" name="rating-star" value="4">
+            <label for="star4" class="full" title="Great"></label>
+            <input type="radio" id="star3" name="rating-star" value="3">
+            <label for="star3" class="full" title="Okay"></label>
+            <input type="radio" id="star2" name="rating-star" value="2">
+            <label for="star2" class="full" title="Not Bad"></label>
+            <input type="radio" id="star1" name="rating-star" value="1">
+            <label for="star1" class="full" title="Horrible"></label>
+          </fieldset>
+        </div>
+        <h2 id="rating-value"></h2>
+      </div>
+      </div>
+        
+         <label for="name-input">Name:</label>
+        <input type='text' id="name-input" placeholder="First and last name"/>
+
+        <label for="review-input">Review:</label>
+        <input type="text" id="review-input" placeholder="Tell us your experience?">
+        <br>
+        <input type="submit" id="add" value="Add"/>
+    </form>
+  </div>
+
+<h2>Customer Reviews</h2>
+<div>
+   <section id="review-list"></section>
 </div>
 
-
-<script src="../main.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js">
-</script>
+<script src="./main.js"></script>
+<script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script>
 </body>
 </html>
