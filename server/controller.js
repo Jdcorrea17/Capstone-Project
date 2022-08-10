@@ -1,9 +1,9 @@
 require('dotenv').config()
-const {CONNECTION_STRING} = process.env
+const {DATABASE_URL} = process.env
 
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize(CONNECTION_STRING, {
+const sequelize = new Sequelize(DATABASE_URL, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {
@@ -41,7 +41,7 @@ module.exports = {
     sequelize.query(`DELETE FROM reviews WHERE reviews_id = ${id}`).then(dbRes => res.status(200).send(dbRes[0])).catch(err => console.log(err))
   },
     getRandom: (req, res) => {
-        const donuts = ["Glazed Donut", "Sugar Donut", "Chocolate Ring", "Chocolate Ring with sprikles", "Maple Donut", "Old Fashion", "Home Cut", "Chocolate Cake", "Red Velvet", "White Cake", "Birthday Cake", "Apple Fritter", "Strawberry Turn-over", "Cherry Turn-over", "Apple Turn-over", "Cinnamon Rolls", "Pecan Rolls", "Bagel", "Glazed Old Fashion", "Bowtie", "Long John", "Bear Claws", "Cinnamon Twist", "Tarts"]
+        const donuts = ["Glazed Donut", "Sugar Donut", "Chocolate Ring", "Chocolate Ring with sprikles", "Maple Donut", "Old Fashion", "Home Cut", "Chocolate Cake", "Red Velvet", "White Cake", "Birthday Cake", "Apple Fritter", "Strawberry Turn-over", "Cherry Turn-over", "Apple Turn-over", "Cinnamon Rolls", "Pecan Rolls", "Sugar Rasied", "Glazed Old Fashion", "Bowtie", "Long John", "Bear Claws", "Cinnamon Twist", "Tarts"]
       
         let random = Math.floor(Math.random() * donuts.length);
         let randomDonut = donuts[random];

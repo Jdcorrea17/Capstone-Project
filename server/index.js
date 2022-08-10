@@ -3,7 +3,7 @@ const cors = require('cors')
 const path = require('path')
 require('dotenv').config()
 
-const {SERVER_PORT} = process.env
+const {PORT} = process.env
 
 
 const app = express()
@@ -34,6 +34,5 @@ app.delete('/review/:id', deleteReview)
 
 app.use(express.static(path.join(__dirname, '../public')))
 
-const port = process.env.PORT || 4005
 
-app.listen(SERVER_PORT, () => {console.log(`Listening on port 4005`)})
+app.listen(PORT, () => {console.log(`Listening on port 4005`)})
