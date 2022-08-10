@@ -32,7 +32,7 @@ function handleSubmit(e) {
       rating: +userRating.value, 
       review: reviewInput.value
   }
-  axios.post('http://localhost:4005/review', body)
+  axios.post('/review', body)
       .then(
         //   nameinput.value = ''  
         getReview()       
@@ -40,7 +40,7 @@ function handleSubmit(e) {
     }
 
 function deleteCard(id) {
-  axios.delete(`http://localhost:4005/review/${id}`)
+  axios.delete(`/review/${id}`)
       .then(() => getReview())
 }
 
@@ -49,7 +49,7 @@ function getReview() {
     // reviewContainer.classList.add("container-review")
   reviewsList.innerHTML = ''
 
-  axios.get('http://localhost:4005/review')
+  axios.get('/review')
       .then(res => {
         console.log(res.data)
           res.data.forEach(elem => {
@@ -69,14 +69,13 @@ function getReview() {
 
 const getRandom = () => {
   console.log('hit')
-    axios.get("http://localhost:4005/donut/random")
+    axios.get("/donut/random")
         .then(res => {
             const data = res.data;
             alert(data);
 }).catch(error => {console.log(error)})
 }
 
-const baseURL ="http://localhost:4005/donut/"
 
 random?.addEventListener('click', getRandom)
 form.addEventListener('submit', handleSubmit)
