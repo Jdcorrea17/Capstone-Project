@@ -45,8 +45,8 @@ function deleteCard(id) {
 }
 
 function getReview() {
-    reviewContainer = document.createElement("div");
-    reviewContainer.classList.add("container-review")
+    // reviewContainer = document.createElement("div");
+    // reviewContainer.classList.add("container-review")
   reviewsList.innerHTML = ''
 
   axios.get('http://localhost:4005/review')
@@ -54,15 +54,16 @@ function getReview() {
         console.log(res.data)
           res.data.forEach(elem => {
               let reviewCard = `<div class="review-card">
-                  <h3>${elem.name}, ${elem.review}</h3>
                   <h3>Rating: ${elem.rating}/5</h3>
-                  <button onclick="deleteCard(${elem['review-id']})">Delete</button>
+                  <h3>${elem.name}</h3>
+                  <h3>${elem.review}</h3>
+                  <button class="delete-btn" onclick="deleteCard(${elem['reviews_id']})">Delete</button>
                   </div>`
 
               reviewsList.innerHTML += reviewCard 
           })
       })
-      reviewContainer.innerHTML(reviewsList)
+    //   reviewContainer.innerHTML(reviewsList)
 }
 
 
